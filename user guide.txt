@@ -1,0 +1,40 @@
+Requirement to run the tool flow:
+
+1). Python 2.7.5 version
+2). Vivado design suite
+3). Linux operting system
+
+Steps to run the code:
+
+1). Designs folder contains all intermediate VHDL design files to run through portable tool flow
+
+2). After storing all intermediate VHDL design files in the designs folder run the tool flow (portable.py) file
+
+
+Intermediate VHDL design file:
+
+1). Here we tried to combine all possible solutions for each design file in a single file. 
+As it is known how we write code effcet on the resource utilization of the target FPGA for example  we can write the code 
+which consumes the less LUT, or more LUT, More Flipflops or less, More BRAM's or less, More DSP Blocks or less.
+
+Possibly we can alter or write the VHDL code in 8 possible ways according to our requirement (its not good idea to have multiple
+files like 8 files for single design, or it is difficult for designer to write or alter exicsting code written by someone else)
+
+To overcome above problem we came up with defining VHDL file in intermediate design file.
+# Here user will define all 8 possible design options in a single file, and also designer can define default design (so that when 
+user run those files without our tool flow its doesn't effect normal synthesis process)
+# To exract hidden options in the design we need to make use of our proposed tool flow.
+
+
+Tool flow working:
+We created folder called "designs"which contains all design files, while running our tool flow it extracts the files avialable
+in that folder. 
+As I mentioned above while writing Intermediate design file designer set default selection the code for example (more LUT, Less Fliflop
+, less DSP, More BRAM's ) design a default.Basically when user runs the intermediate files without our tool flow he get above
+optioned bit file.
+
+In our tool flow we have given options to keep some files to default and some files user to selects there choices:
+This is  automated part and customized part
+Automated part: selected options like (less LUT, More FF, More BRAM, Less DSP) applied all available intermediate files
+Coustmized part:Here user define the number of files he like to keep default and to select design options. If we want to keep 
+two files to default selection and rest files to make his selection, which he can do using this.        
