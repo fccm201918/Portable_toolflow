@@ -1,0 +1,11 @@
+Here this hows the screenshot of the automated part of the tool flow:
+
+Screen shots are araanged in the incresing order (capture 1 to capture 5)
+
+Capture1:
+
+When we run portable.py file of the tool flow it displays this screen 
+Here user need to select either they like to use automated or coustmized
+
+Automated part: Here user selected parametrs selected to th e
+
