@@ -33,14 +33,38 @@ def main():
 	
 	
 	# taking input from user
-	x1=input ("Type number files you like to slect for design parameter selection >>")
+	i-=1
+	while True:
+		try:
+			
+				
+			x1=input ("Type number files you like to slect for design parameter selection >>")
+			if (x1 > i):
+				print("\n")
+				print("ERROR: Enter the valid option")
+				print("\n")
+				continue
+			else:
+				break
+		except:
+			print("Enter the valid option")			
+			
 	
 	sw=[]
 	a1=x1
 	a2=x1
 	g1=open("da1.txt","w")
 	while (x1>0):
-		s1=raw_input("Enter the file name >>> ")
+		while True:
+			try:
+				
+				
+				
+				s1=raw_input("Enter the file name >>> ")
+				men=open(s1,"r")
+				break
+			except:
+				print("Enter the valid file name")	
 		sw.append(s1)
 		g1.write(s1)
 		g1.write("\n")
@@ -804,9 +828,4 @@ def main():
 	
 		
 		
-'''	
-
-
-	
-
-
+'''        
